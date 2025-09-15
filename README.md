@@ -68,10 +68,12 @@ pharma_graph_pipeline/
 
 ### Installation
 
-1.  **Clone the repository:**
+1.  **Clone the repository and install Poetry** (if not already installed).
+
+2.  **Navigate to the project directory and install dependencies:**
+    Poetry will automatically create a virtual environment and install the dependencies listed in `pyproject.toml` and `poetry.lock`.
     ```bash
-    git clone [https://github.com/VOTRE_NOM/NOM_DU_REPO.git](https://github.com/VOTRE_NOM/NOM_DU_REPO.git)
-    cd NOM_DU_REPO
+    poetry install
     ```
 
 2.  **Create and activate a virtual environment:**
@@ -87,19 +89,19 @@ pharma_graph_pipeline/
     ```
 
 ### Running the Pipeline Locally
+To run scripts, use `poetry run`. This ensures the script runs inside the virtual environment managed by Poetry.
+```bash
+poetry run python -m src.pharma_graph_pipeline.main
+```
+But first you have to Place your raw data files (`drugs.csv`, `pubmed.csv`, etc.) in the `data/raw/` directory.
 
-1.  Place your raw data files (`drugs.csv`, `pubmed.csv`, etc.) in the `data/raw/` directory.
-2.  Execute the main script from the **project root directory**:
-    ```bash
-    python -m src.pharma_graph_pipeline.main
-    ```
-3.  The output will be generated in the `outputs/drug_graph.json` file.
+The output will be generated in the `outputs/drug_graph.json` file.
 
 ### Running Tests
 
 To ensure everything is working as expected, run the full test suite from the **project root directory**:
 ```bash 
-pytest -v
+poetry run pytest -v
 ```
 
 ## 5. Ad-Hoc Analysis

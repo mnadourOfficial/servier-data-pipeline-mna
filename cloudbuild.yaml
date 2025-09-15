@@ -1,20 +1,26 @@
 # cloudbuild.yaml
+
 steps:
-# Step 1: Install dependencies AND run tests in the same container
+# Step 1: Install Poetry, export dependencies to a requirements.txt, install them, and run tests.
 - name: 'python:3.12-slim'
   id: 'Install-and-Test'
   entrypoint: 'bash'
   args:
   - '-c'
   - |
+    pip install poetry
+    # Export dependencies from the lock file to a standard requirements.txt
+    poetry export -f requirements.txt --output requirements.txt --without-hashes
+    # Install dependencies using pip
     pip install -r requirements.txt
+    # Run tests
     pytest -v
 
-# Step 2: Deploy the application code to Cloud Composer's GCS bucket
-# We sync the entire project so the DAG can find the 'src' folder
+# Step 2: Deploy the application code (including the new requirements.txt)
 - name: 'gcr.io/cloud-builders/gsutil'
   id: 'Deploy-App-Code'
   args:
+  # ... (cette partie reste inchangée, elle synchronise tout le dossier)
   - '-m'
   - 'rsync'
   - '-r'
@@ -23,10 +29,11 @@ steps:
   - '.'
   - 'gs://${_COMPOSER_BUCKET}/data/pharma_graph_pipeline'
 
-# Step 3: Deploy the DAG file to Cloud Composer's dags folder
+# Step 3: Deploy the DAG file
 - name: 'gcr.io/cloud-builders/gsutil'
   id: 'Deploy-DAG'
   args:
+  # ... (cette partie reste inchangée)
   - '-m'
   - 'rsync'
   - '-c'

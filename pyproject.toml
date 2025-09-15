@@ -1,0 +1,24 @@
+[project]
+name = "servier-data-pipeline-mna"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Mehdi NADOUR",email = "nadourmehdi@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pandas (>=2.3.2,<3.0.0)",
+    "pyyaml (>=6.0.2,<7.0.0)",
+    "gcsfs (>=2025.9.0,<2026.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "pytest (>=8.4.2,<9.0.0)"
+]

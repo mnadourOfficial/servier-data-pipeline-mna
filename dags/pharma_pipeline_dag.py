@@ -4,9 +4,14 @@ from airflow.models.dag import DAG
 from airflow.operators.bash import BashOperator
 import pendulum
 
-# Best Practice: Define the project's base directory using an Airflow Variable.
 # This makes the DAG portable across different environments.
 PROJECT_DIR = "{{ var.value.pharma_project_dir }}"
+# Commande pour installer les dépendances et lancer un script
+RUN_COMMAND = f"""
+cd {PROJECT_DIR} && \
+pip install -r requirements.txt && \
+python -m
+"""
 
 with DAG(
     dag_id="pharma_data_pipeline_v1",
@@ -30,13 +35,13 @@ with DAG(
     # Task 2: Run the main data pipeline script
     task_run_main_pipeline = BashOperator(
         task_id="run_main_pipeline",
-        bash_command=f"cd {PROJECT_DIR} && python -m src.pharma_graph_pipeline.main",
+        bash_command=f"{RUN_COMMAND} src.pharma_graph_pipeline.main",
     )
 
     # Task 3: Run the ad-hoc analysis script
     task_run_adhoc_analysis = BashOperator(
         task_id="run_adhoc_analysis",
-        bash_command=f"cd {PROJECT_DIR} && python -m src.pharma_graph_pipeline.adhoc.analysis",
+        bash_command=f"{RUN_COMMAND} src.pharma_graph_pipeline.adhoc.analysis",
     )
 
     # Define the execution order
