@@ -55,7 +55,9 @@ pharma_graph_pipeline/
 ├── cloudbuild.yaml          # CI/CD configuration for Google Cloud Build
 ├── config.yaml              # Configuration file (paths, etc.)
 ├── pytest.ini               # Configuration for Pytest (path setup)
-└── requirements.txt         # Python project dependencies
+└── pyproject.toml           # Python project dependencies
+└── poetry.lock              # Python project dependencies
+└── dockerfile               # Docker image builder
 ```
 
 ---
