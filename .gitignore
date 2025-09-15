@@ -2,6 +2,11 @@
 
 # Python
 __pycache__/
+servier-data-pipeline-mna/src/pharma_graph_pipeline/__pycache__/
+servier-data-pipeline-mna/tests/__pycache__/
+servier-data-pipeline-mna/src/pharma_graph_pipeline/adhoc/__pycache__/
+servier-data-pipeline-mna/src/pharma_graph_pipeline/pipeline/__pycache__/
+
 *.pyc
 .pytest_cache/
 
