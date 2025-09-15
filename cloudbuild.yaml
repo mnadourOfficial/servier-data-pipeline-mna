@@ -1,0 +1,35 @@
+# cloudbuild.yaml
+steps:
+# Step 1: Install dependencies AND run tests in the same container
+- name: 'python:3.12-slim'
+  id: 'Install-and-Test'
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - |
+    pip install -r requirements.txt
+    pytest -v
+
+# Step 2: Deploy the application code to Cloud Composer's GCS bucket
+# We sync the entire project so the DAG can find the 'src' folder
+- name: 'gcr.io/cloud-builders/gsutil'
+  id: 'Deploy-App-Code'
+  args:
+  - '-m'
+  - 'rsync'
+  - '-r'
+  - '-c'
+  - '-d'
+  - '.'
+  - 'gs://${_COMPOSER_BUCKET}/data/pharma_graph_pipeline'
+
+# Step 3: Deploy the DAG file to Cloud Composer's dags folder
+- name: 'gcr.io/cloud-builders/gsutil'
+  id: 'Deploy-DAG'
+  args:
+  - '-m'
+  - 'rsync'
+  - '-c'
+  - '-d'
+  - 'dags/'
+  - 'gs://${_COMPOSER_BUCKET}/dags'

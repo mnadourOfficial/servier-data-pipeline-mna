@@ -1,0 +1,218 @@
+{
+    "journals": [
+        {
+            "title": "american journal of veterinary research",
+            "references": {
+                "pubmed": [
+                    {
+                        "article_id": "5",
+                        "article_title": "appositional tetracycline bone formation rates in the beagle",
+                        "mention_date": "2020-01-02",
+                        "mentioned_drug_id": "S03AA",
+                        "mentioned_drug_name": "TETRACYCLINE"
+                    }
+                ],
+                "clinical_trials": []
+            }
+        },
+        {
+            "title": "hôpitaux universitaires de genève",
+            "references": {
+                "pubmed": [],
+                "clinical_trials": [
+                    {
+                        "article_id": "NCT04153396",
+                        "article_title": "preemptive infiltration with betamethasone and ropivacaine for postoperative pain in laminoplasty or laminectomy",
+                        "mention_date": "2020-01-01",
+                        "mentioned_drug_id": "R01AD",
+                        "mentioned_drug_name": "BETAMETHASONE"
+                    }
+                ]
+            }
+        },
+        {
+            "title": "journal of back and musculoskeletal rehabilitation",
+            "references": {
+                "pubmed": [
+                    {
+                        "article_id": "11",
+                        "article_title": "effects of topical application of betamethasone on imiquimod-induced psoriasis-like skin inflammation in mice",
+                        "mention_date": "2020-01-01",
+                        "mentioned_drug_id": "R01AD",
+                        "mentioned_drug_name": "BETAMETHASONE"
+                    }
+                ],
+                "clinical_trials": []
+            }
+        },
+        {
+            "title": "journal of emergency nursing",
+            "references": {
+                "pubmed": [
+                    {
+                        "article_id": "1",
+                        "article_title": "a 44-year-old man with erythema of the face diphenhydramine neck and chest weakness and palpitations",
+                        "mention_date": "2019-01-01",
+                        "mentioned_drug_id": "A04AD",
+                        "mentioned_drug_name": "DIPHENHYDRAMINE"
+                    },
+                    {
+                        "article_id": "2",
+                        "article_title": "an evaluation of benadryl pyribenzamine and other so-called diphenhydramine antihistaminic drugs in the treatment of allergy",
+                        "mention_date": "2019-01-01",
+                        "mentioned_drug_id": "A04AD",
+                        "mentioned_drug_name": "DIPHENHYDRAMINE"
+                    }
+                ],
+                "clinical_trials": [
+                    {
+                        "article_id": "NCT01967433",
+                        "article_title": "use of diphenhydramine as an adjunctive sedative for colonoscopy in patients chronically on opioids",
+                        "mention_date": "2020-01-01",
+                        "mentioned_drug_id": "A04AD",
+                        "mentioned_drug_name": "DIPHENHYDRAMINE"
+                    },
+                    {
+                        "article_id": "NCT04189588",
+                        "article_title": "phase 2 study iv quzyttir cetirizine hydrochloride injection vs v diphenhydramine",
+                        "mention_date": "2020-01-01",
+                        "mentioned_drug_id": "A04AD",
+                        "mentioned_drug_name": "DIPHENHYDRAMINE"
+                    },
+                    {
+                        "article_id": "NCT04237091",
+                        "article_title": "feasibility of a randomized controlled clinical trial comparing the use of cetirizine to replace diphenhydramine in the prevention of reactions related to paclitaxel",
+                        "mention_date": "2020-01-01",
+                        "mentioned_drug_id": "A04AD",
+                        "mentioned_drug_name": "DIPHENHYDRAMINE"
+                    },
+                    {
+                        "article_id": "NCT04188184",
+                        "article_title": "tranexamic acid versus epinephrine during exploratory tympanotomy",
+                        "mention_date": "2020-04-27",
+                        "mentioned_drug_id": "A01AD",
+                        "mentioned_drug_name": "EPINEPHRINE"
+                    }
+                ]
+            }
+        },
+        {
+            "title": "journal of food protection",
+            "references": {
+                "pubmed": [
+                    {
+                        "article_id": "4",
+                        "article_title": "tetracycline resistance patterns of lactobacillus buchneri group strains",
+                        "mention_date": "2020-01-01",
+                        "mentioned_drug_id": "S03AA",
+                        "mentioned_drug_name": "TETRACYCLINE"
+                    }
+                ],
+                "clinical_trials": []
+            }
+        },
+        {
+            "title": "journal of photochemistry and photobiology b biology",
+            "references": {
+                "pubmed": [
+                    {
+                        "article_id": "9",
+                        "article_title": "gold nanoparticles synthesized from euphorbia fischeriana root by green route method alleviates the isoprenaline hydrochloride induced myocardial infarction in rats",
+                        "mention_date": "2020-01-01",
+                        "mentioned_drug_id": "6302001",
+                        "mentioned_drug_name": "ISOPRENALINE"
+                    }
+                ],
+                "clinical_trials": []
+            }
+        },
+        {
+            "title": "psychopharmacology",
+            "references": {
+                "pubmed": [
+                    {
+                        "article_id": "6",
+                        "article_title": "rapid reacquisition of contextual fear following extinction in mice effects of amount of extinction tetracycline acute ethanol withdrawal and ethanol intoxication",
+                        "mention_date": "2020-01-01",
+                        "mentioned_drug_id": "S03AA",
+                        "mentioned_drug_name": "TETRACYCLINE"
+                    },
+                    {
+                        "article_id": "6",
+                        "article_title": "rapid reacquisition of contextual fear following extinction in mice effects of amount of extinction tetracycline acute ethanol withdrawal and ethanol intoxication",
+                        "mention_date": "2020-01-01",
+                        "mentioned_drug_id": "V03AB",
+                        "mentioned_drug_name": "ETHANOL"
+                    }
+                ],
+                "clinical_trials": []
+            }
+        },
+        {
+            "title": "the journal of allergy and clinical immunology in practice",
+            "references": {
+                "pubmed": [
+                    {
+                        "article_id": "7",
+                        "article_title": "the high cost of epinephrine autoinjectors and possible alternatives",
+                        "mention_date": "2020-02-01",
+                        "mentioned_drug_id": "A01AD",
+                        "mentioned_drug_name": "EPINEPHRINE"
+                    },
+                    {
+                        "article_id": "8",
+                        "article_title": "time to epinephrine treatment is associated with the risk of mortality in children who achieve sustained rosc after traumatic out-of-hospital cardiac arrest",
+                        "mention_date": "2020-03-01",
+                        "mentioned_drug_id": "A01AD",
+                        "mentioned_drug_name": "EPINEPHRINE"
+                    }
+                ],
+                "clinical_trials": []
+            }
+        },
+        {
+            "title": "the journal of maternal-fetal neonatal medicine",
+            "references": {
+                "pubmed": [
+                    {
+                        "article_id": "10",
+                        "article_title": "clinical implications of umbilical artery doppler changes after betamethasone administration",
+                        "mention_date": "2020-01-01",
+                        "mentioned_drug_id": "R01AD",
+                        "mentioned_drug_name": "BETAMETHASONE"
+                    },
+                    {
+                        "article_id": "",
+                        "article_title": "comparison of pressure betamethasone release phonophoresis and dry needling in treatment of latent myofascial trigger point of upper trapezius atropine muscle",
+                        "mention_date": "2020-01-03",
+                        "mentioned_drug_id": "A03BA",
+                        "mentioned_drug_name": "ATROPINE"
+                    },
+                    {
+                        "article_id": "",
+                        "article_title": "comparison of pressure betamethasone release phonophoresis and dry needling in treatment of latent myofascial trigger point of upper trapezius atropine muscle",
+                        "mention_date": "2020-01-03",
+                        "mentioned_drug_id": "R01AD",
+                        "mentioned_drug_name": "BETAMETHASONE"
+                    }
+                ],
+                "clinical_trials": []
+            }
+        },
+        {
+            "title": "the journal of pediatrics",
+            "references": {
+                "pubmed": [
+                    {
+                        "article_id": "3",
+                        "article_title": "diphenhydramine hydrochloride helps symptoms of ciguatera fish poisoning",
+                        "mention_date": "2019-01-02",
+                        "mentioned_drug_id": "A04AD",
+                        "mentioned_drug_name": "DIPHENHYDRAMINE"
+                    }
+                ],
+                "clinical_trials": []
+            }
+        }
+    ]
+}

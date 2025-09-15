@@ -1,0 +1,49 @@
+{
+    "journals": [
+        {
+            "title": "nejm",
+            "references": {
+                "pubmed": [
+                    {
+                        "article_id": "3",
+                        "article_title": "another aspirin trial",
+                        "mention_date": "2022-03-20",
+                        "mentioned_drug_id": "DRUG1",
+                        "mentioned_drug_name": "ASPIRIN"
+                    }
+                ],
+                "clinical_trials": [
+                    {
+                        "article_id": "NCT123",
+                        "article_title": "a clinical trial of paracetamol",
+                        "mention_date": "2022-05-10",
+                        "mentioned_drug_id": "DRUG2",
+                        "mentioned_drug_name": "PARACETAMOL"
+                    }
+                ]
+            }
+        },
+        {
+            "title": "the lancet",
+            "references": {
+                "pubmed": [
+                    {
+                        "article_id": "1",
+                        "article_title": "a study of aspirin",
+                        "mention_date": "2022-01-15",
+                        "mentioned_drug_id": "DRUG1",
+                        "mentioned_drug_name": "ASPIRIN"
+                    },
+                    {
+                        "article_id": "2",
+                        "article_title": "paracetamol is effective",
+                        "mention_date": "2022-02-10",
+                        "mentioned_drug_id": "DRUG2",
+                        "mentioned_drug_name": "PARACETAMOL"
+                    }
+                ],
+                "clinical_trials": []
+            }
+        }
+    ]
+}

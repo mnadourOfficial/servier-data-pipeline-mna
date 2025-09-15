@@ -1,0 +1,17 @@
+[
+    {"id": 2, 
+    "title": "Paracetamol is effective", 
+    "date": "02/10/2022", 
+    "journal": "The Lancet"
+    },
+    {"id": 3, 
+    "title": "Another Aspirin trial", 
+    "date": "2022-03-20", 
+    "journal": "NEJM"
+    },
+    {"id": 4, 
+    "title": "Another UNGNOWN DRUG trial", 
+    "date": "2022-03-20", 
+    "journal": "NEJM"
+    }
+]

@@ -1,0 +1,9 @@
+# config.yaml
+
+# Input data directory
+input_paths:
+  raw_data_dir: 'data/raw'
+
+# NEW: Output data path, now pointing to the 'outputs/' folder
+output_path:
+  drug_graph: 'outputs/drug_graph.json'
