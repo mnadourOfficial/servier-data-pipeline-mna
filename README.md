@@ -131,6 +131,13 @@ This project is designed for automated deployment and execution on Google Cloud 
 4.  If tests pass, Cloud Build deploys the application code and the DAG file to the **Cloud Composer** GCS bucket.
 5.  **Cloud Composer (Airflow)** automatically detects the new DAG and schedules it for execution.
 
+### Deployment Workflow
+* Merge Requests (MRs) are the key to this process. When an MR is accepted and merged into a branch, it automatically kicks off a deployment to its corresponding environment.
+
+* Automated testing is a critical part of each stage, ensuring that code is stable and bug-free before moving forward.
+
+* Manual validation gates are used between environments to provide a final, human review. This is an important step before promoting code from staging to production.
+
 ### Step-by-Step Deployment Setup
 
 1.  **GCP Prerequisites**:
