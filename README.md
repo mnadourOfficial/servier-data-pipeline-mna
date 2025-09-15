@@ -170,3 +170,40 @@ This project is designed for automated deployment and execution on Google Cloud 
         * **Val**: `/home/airflow/gcs/data/pharma_graph_pipeline`
 
 Once these steps are completed, every `git push` to your main branch will trigger this automated, tested, and secure deployment process.
+
+
+# Going Further
+
+To handle very large data volumes (terabytes of files), our current code, based on **Pandas**, won't work because it's limited by the memory of a single machine. We need to switch to a **distributed computing architecture**.
+
+Here are two modern and robust approaches to achieve this.
+
+---
+
+### Option 1: The ETL Approach with Spark (PySpark)
+
+This approach uses a cluster of machines to transform data in memory *before* loading the final result.
+
+* **Main Idea**: We rewrite our Python logic in **PySpark** (the Python version of Spark) and execute it on a managed cluster like **Google Cloud Dataproc**.
+* **How It Works**:
+    1.  Raw data is stored on **Google Cloud Storage (GCS)** in the optimized **Parquet** format.
+    2.  Our **Airflow** DAG launches a job on the Dataproc cluster.
+    3.  The Spark job reads the data from GCS and performs transformations (mention lookup, aggregation) in parallel across all cluster machines.
+    4.  The results are then written to GCS (or another destination).
+* **Ideal for**: Complex transformations that are easier to write in Python than in SQL, and for teams already familiar with the Spark ecosystem.
+
+---
+
+### Option 2: The ELT Approach with BigQuery & dbt (or Dataform) (Modern and Serverless)
+
+This approach involves loading the raw data first and then using the power of the data warehouse to transform it.
+
+* **Main Idea**: Files are received in GCS, and we load the raw data directly into **BigQuery**. Then, we use **SQL** queries, orchestrated by the **dbt (or Dataform)** tool, to transform the data directly within BigQuery (staging / intermediate / mart).
+* **How It Works**:
+    1.  A **Cloud Run** service automatically loads files from GCS into raw tables in BigQuery.
+    2.  We launch dbt transformations, which consist of a series of SQL models. These models perform the necessary joins to denormalize source tables and aggregate information, building the final data marts ready for analysis. The result is a new, "clean" table in BigQuery.
+* **Ideal for**: Teams who are very comfortable with **SQL** and want a **"serverless"** solution without having to manage clusters.
+
+---
+
+**In summary, the choice depends on your preferences and skills**: **Spark** if you prefer Python logic and fine-grained control over execution, **BigQuery/dbt** if you prefer a SQL approach and the simplicity of a serverless solution.
