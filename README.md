@@ -135,6 +135,9 @@ This project is designed for automated deployment and execution on Google Cloud 
 4.  If tests pass, Cloud Build deploys the application code and the DAG file to the **Cloud Composer** GCS bucket.
 5.  **Cloud Composer (Airflow)** automatically detects the new DAG and schedules it for execution.
 
+<img width="1458" height="649" alt="image" src="https://github.com/user-attachments/assets/d6a4975e-3cb0-474d-b140-d53593a646f6" />
+
+
 ### Deployment Workflow
 * Merge Requests (MRs) are the key to this process. When an MR is accepted and merged into a branch, it automatically kicks off a deployment to its corresponding environment.
 
@@ -170,6 +173,17 @@ This project is designed for automated deployment and execution on Google Cloud 
         * **Val**: `/home/airflow/gcs/data/pharma_graph_pipeline`
 
 Once these steps are completed, every `git push` to your main branch will trigger this automated, tested, and secure deployment process.
+
+## Disclaimer on Orchestrator Choice & Cost
+
+**Cloud Composer (Airflow managé)**
+Est un service puissant, mais il peut s'avérer **coûteux** pour des projets de petite taille ou des environnements de développement, car il maintient une infrastructure dédiée en permanence. Il a été utilisé ici pour démontrer une architecture de production standard.
+
+Pour un projet de cette envergure, considérez ces alternatives plus économiques :
+
+**Alternative 1 : Airflow auto-hébergé** : Déployer Airflow avec Docker Compose sur une petite machine virtuelle **Google Compute Engine (GCE)**. C'est beaucoup moins cher et offre un contrôle total, mais demande une configuration et une maintenance manuelles.
+
+**Alternative 2 : Google Cloud Workflows** : C'est un orchestrateur **serverless** et déclaratif, idéal pour des pipelines entièrement sur GCP. Il est extrêmement économique (paiement à l'usage) et s'intègre parfaitement avec Cloud Functions ou Cloud Run pour exécuter notre code Python.
 
 
 # Going Further
